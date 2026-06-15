@@ -133,11 +133,28 @@ https://<你的用户名>.github.io/<仓库名>/
 
 ## 如何更新项目
 
-1. 修改 `inbox/` 中的源文件
-2. 手动删除旧的 `projects/{slug}/` 和 `gallery.json` 条目
-3. 重新运行 `npm run import -- inbox/...`
+**推荐：放入 inbox 后用 `--update` 覆盖**
+
+```bash
+# 1. 把更新后的文件夹放进 inbox/（文件夹名与 slug 一致）
+# 2. 覆盖 projects/ 中的旧版本
+npm run import -- inbox/eye-demo --update
+
+# 可选：同时更新标题、日期等元数据
+npm run import -- inbox/eye-demo --update --date 2026-06-20
+```
+
+`--update` 会覆盖 `projects/{slug}/` 里的文件，**不会**修改 Artifact 的 HTML（返回按钮在 Gallery 顶栏，不在项目内）。
+
+**更简单的方式**：若只改了 HTML/CSS/资源、元数据不变，可直接替换 `projects/{slug}/` 里的文件，无需走 inbox。
 
 或创建新 slug（如 `my-project-v2`）保留旧版本。
+
+## 项目查看方式
+
+从首页「打开项目」会进入 `viewer.html` —— 顶部是 Gallery 顶栏（含返回按钮），下方 iframe 加载你的 Artifact。这样返回导航与作品 HTML 完全分离，更新作品时无需改 HTML。
+
+「独立打开」则直接进入 `projects/{slug}/`，无顶栏，适合全屏演示。
 
 ## 如何删除项目
 

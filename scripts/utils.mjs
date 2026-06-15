@@ -260,22 +260,3 @@ export function formatIssueList(issues, label) {
     })
   );
 }
-
-const GALLERY_BACK_CSS = '  <link rel="stylesheet" href="../../assets/css/gallery-back.css">\n';
-const GALLERY_BACK_LINK =
-  '  <a class="gallery-back" href="../../index.html">← 返回 Gallery</a>\n';
-
-export function injectGalleryBackButton(indexPath) {
-  if (!fs.existsSync(indexPath)) return false;
-
-  let html = fs.readFileSync(indexPath, 'utf8');
-  if (html.includes('gallery-back')) return false;
-
-  if (!html.includes('gallery-back.css')) {
-    html = html.replace(/<\/head>/i, GALLERY_BACK_CSS + '</head>');
-  }
-
-  html = html.replace(/<body([^>]*)>/i, `<body$1>\n${GALLERY_BACK_LINK}`);
-  fs.writeFileSync(indexPath, html, 'utf8');
-  return true;
-}

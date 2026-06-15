@@ -70,8 +70,13 @@
     return sortByDate(filtered);
   }
 
+  function viewerUrl(project) {
+    return './viewer.html?p=' + encodeURIComponent(project.id);
+  }
+
   function renderCard(project) {
     const path = normalizePath(project.path);
+    const viewUrl = viewerUrl(project);
     const thumbnail = project.thumbnail || DEFAULT_THUMBNAIL;
     const tags = (project.tags || []).map(function (tag) {
       return '<li class="card__tag">' + escapeHtml(tag) + '</li>';
@@ -81,7 +86,7 @@
 
     return (
       '<article class="card' + featuredClass + '" data-id="' + escapeHtml(project.id) + '">' +
-        '<a class="card__thumbnail-link" href="' + escapeHtml(path) + '" tabindex="-1" aria-hidden="true">' +
+        '<a class="card__thumbnail-link" href="' + escapeHtml(viewUrl) + '" tabindex="-1" aria-hidden="true">' +
           '<img class="card__thumbnail" src="' + escapeHtml(thumbnail) + '" alt="" loading="lazy" ' +
             'onerror="this.onerror=null;this.src=\'' + DEFAULT_THUMBNAIL + '\'">' +
         '</a>' +
@@ -93,13 +98,13 @@
             '</time>' +
           '</div>' +
           '<h2 class="card__title">' +
-            '<a href="' + escapeHtml(path) + '">' + escapeHtml(project.title) + '</a>' +
+            '<a href="' + escapeHtml(viewUrl) + '">' + escapeHtml(project.title) + '</a>' +
           '</h2>' +
           '<p class="card__description">' + escapeHtml(project.description || '') + '</p>' +
           (tags ? '<ul class="card__tags" aria-label="标签">' + tags + '</ul>' : '') +
           '<div class="card__actions">' +
-            '<a class="btn btn--primary" href="' + escapeHtml(path) + '">打开项目</a>' +
-            '<a class="btn btn--secondary" href="' + escapeHtml(path) + '" target="_blank" rel="noopener noreferrer">新标签页</a>' +
+            '<a class="btn btn--primary" href="' + escapeHtml(viewUrl) + '">打开项目</a>' +
+            '<a class="btn btn--secondary" href="' + escapeHtml(path) + '" target="_blank" rel="noopener noreferrer">独立打开</a>' +
           '</div>' +
         '</div>' +
       '</article>'

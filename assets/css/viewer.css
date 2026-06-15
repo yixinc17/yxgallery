@@ -1,0 +1,133 @@
+/* Gallery viewer — external chrome, artifact in iframe */
+
+:root {
+  --bar-height: 48px;
+  --bar-bg: #ffffff;
+  --bar-border: #e2e4e8;
+  --bar-text: #1a1a1a;
+  --bar-muted: #5c5c5c;
+  --accent: #2563eb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.viewer-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--bar-height);
+  background: var(--bar-bg);
+  border-bottom: 1px solid var(--bar-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.viewer-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.viewer-bar__back {
+  flex-shrink: 0;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--bar-text);
+  background: #f1f5f9;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.viewer-bar__back:hover {
+  background: #e2e8f0;
+}
+
+.viewer-bar__back:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.viewer-bar__title {
+  flex: 1;
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--bar-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.viewer-bar__actions {
+  flex-shrink: 0;
+}
+
+.viewer-bar__link {
+  font-size: 0.8125rem;
+  color: var(--bar-muted);
+  text-decoration: none;
+}
+
+.viewer-bar__link:hover {
+  color: var(--accent);
+}
+
+.viewer-bar__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.viewer-frame {
+  display: block;
+  width: 100%;
+  height: calc(100vh - var(--bar-height));
+  margin-top: var(--bar-height);
+  border: 0;
+  background: #fff;
+}
+
+.viewer-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - var(--bar-height));
+  margin-top: var(--bar-height);
+  padding: 2rem;
+  text-align: center;
+  color: var(--bar-muted);
+}
+
+.viewer-error a {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .viewer-bar__title {
+    font-size: 0.8125rem;
+  }
+
+  .viewer-bar__link {
+    font-size: 0.75rem;
+  }
+}

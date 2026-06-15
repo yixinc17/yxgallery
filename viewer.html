@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>查看项目 — Yixin's Gallery</title>
+  <link rel="stylesheet" href="./assets/css/viewer.css">
+</head>
+<body>
+  <header class="viewer-bar">
+    <div class="viewer-bar__inner">
+      <a class="viewer-bar__back" href="./index.html">← 返回 Gallery</a>
+      <h1 class="viewer-bar__title" id="viewer-title">加载中…</h1>
+      <div class="viewer-bar__actions">
+        <a class="viewer-bar__link" id="viewer-direct" href="#" target="_blank" rel="noopener noreferrer">独立打开</a>
+      </div>
+    </div>
+  </header>
+
+  <iframe
+    id="viewer-frame"
+    class="viewer-frame"
+    title="项目内容"
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
+  ></iframe>
+
+  <div id="viewer-error" class="viewer-error" hidden>
+    <p>无法加载该项目。</p>
+    <a href="./index.html">返回 Gallery 首页</a>
+  </div>
+
+  <script src="./assets/js/viewer.js"></script>
+</body>
+</html>

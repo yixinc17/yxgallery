@@ -24,7 +24,6 @@ import {
   copyRecursive,
   getRepoName,
   formatIssueList,
-  injectGalleryBackButton,
 } from './utils.mjs';
 import { ensureThumbnail, thumbnailRelPath } from './thumbnail.mjs';
 
@@ -42,6 +41,7 @@ function parseArgs(argv) {
     thumbnail: null,
     noThumbnail: false,
     placeholderOnly: false,
+    update: false,
   };
 
   const positional = [];
@@ -58,6 +58,7 @@ function parseArgs(argv) {
     else if (arg === '--move') args.move = true;
     else if (arg === '--no-thumbnail') args.noThumbnail = true;
     else if (arg === '--placeholder-only') args.placeholderOnly = true;
+    else if (arg === '--update') args.update = true;
     else if (arg === '--help' || arg === '-h') args.help = true;
     else if (!arg.startsWith('-')) positional.push(arg);
   }
@@ -83,6 +84,7 @@ Options:
   --thumbnail <path>    缩略图相对路径（默认自动截取）
   --no-thumbnail        跳过缩略图生成
   --placeholder-only    仅生成 SVG 占位图，不截图
+  --update                更新已有项目（覆盖 projects/{slug}/，不新增 gallery 条目）
   --featured            标记为精选
   --move                移动而非复制（默认复制）
   --help                显示帮助
@@ -219,9 +221,20 @@ async function main() {
   }
 
   const destDir = path.join(ROOT, 'projects', slug);
+  const gallery = readGallery();
+  const existingEntry = gallery.find((e) => e.id === slug);
+  const isUpdate = args.update;
+
   if (fs.existsSync(destDir)) {
-    console.error(`❌ 目标已存在: projects/${slug}/ — 拒绝静默覆盖。`);
-    process.exit(1);
+    if (!isUpdate) {
+      console.error(`❌ 目标已存在: projects/${slug}/ — 拒绝静默覆盖。`);
+      console.error('   若要更新，请使用: npm run import -- inbox/... --update');
+      process.exit(1);
+    }
+    console.log('   🔄 更新模式：覆盖 projects/' + slug + '/');
+    fs.rmSync(destDir, { recursive: true, force: true });
+  } else if (isUpdate && !existingEntry) {
+    console.log('   ℹ️  项目目录不存在，按新导入处理');
   }
 
   if (kind === 'folder') {
@@ -235,10 +248,6 @@ async function main() {
   if (!fs.existsSync(indexPath)) {
     console.error('导入后未找到 index.html。');
     process.exit(1);
-  }
-
-  if (injectGalleryBackButton(indexPath)) {
-    console.log('   ✅ 已添加返回 Gallery 按钮');
   }
 
   // Resource scan
@@ -272,17 +281,33 @@ async function main() {
   }
 
   // Update gallery.json
-  const gallery = readGallery();
-  if (gallery.some((e) => e.id === slug)) {
-    console.error(`❌ gallery.json 中已存在 id: ${slug}`);
-    process.exit(1);
+  let entry;
+
+  if (isUpdate && existingEntry) {
+    entry = { ...existingEntry };
+    if (args.title) entry.title = args.title;
+    if (args.description) entry.description = args.description;
+    if (args.type && VALID_TYPES.includes(args.type)) entry.type = args.type;
+    if (args.tags) entry.tags = args.tags.split(',').map((t) => t.trim()).filter(Boolean);
+    if (args.date && /^\d{4}-\d{2}-\d{2}$/.test(args.date)) entry.date = args.date;
+    if (args.featured) entry.featured = true;
+    if (args.thumbnail) entry.thumbnail = args.thumbnail;
+
+    const idx = gallery.findIndex((e) => e.id === slug);
+    gallery[idx] = entry;
+    writeGallery(gallery);
+    console.log('\n✅ 已更新 gallery.json（元数据）');
+  } else {
+    if (gallery.some((e) => e.id === slug)) {
+      console.error(`❌ gallery.json 中已存在 id: ${slug}`);
+      process.exit(1);
+    }
+
+    entry = buildEntry(args, slug, indexPath);
+    gallery.push(entry);
+    writeGallery(gallery);
+    console.log('\n✅ 已更新 gallery.json');
   }
-
-  const entry = buildEntry(args, slug, indexPath);
-  gallery.push(entry);
-  writeGallery(gallery);
-
-  console.log('\n✅ 已更新 gallery.json');
   console.log(`   标题: ${entry.title}`);
   console.log(`   类型: ${entry.type}`);
   console.log(`   日期: ${entry.date}`);

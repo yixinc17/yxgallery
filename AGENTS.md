@@ -131,10 +131,10 @@ GitHub Pages 设置见 README.md。
 
 ## 禁止事项
 
-1. ❌ 不要覆盖 `projects/` 中已有项目
+1. ❌ 不要静默覆盖 `projects/` 中已有项目（须用 `--update` 且用户明确要更新）
 2. ❌ 不要提交 `.env`、密钥、token 等敏感文件
 3. ❌ 不要修改 Artifact 的 HTML/CSS/JS（除非修复路径问题且用户同意）
-4. ❌ 不要在 Gallery 首页用 iframe 嵌入 Artifact
+4. ❌ 不要在 Gallery **首页**用 iframe 嵌入 Artifact（`viewer.html` 顶栏 + iframe 是允许的）
 5. ❌ 不要写死 GitHub 用户名或仓库名
 6. ❌ 不要使用 `/assets/` 或 `/projects/` 作为 Artifact 内的绝对路径
 7. ❌ 不要擅自 `git push`
@@ -142,11 +142,19 @@ GitHub Pages 设置见 README.md。
 
 ## 更新已有项目
 
-如需更新已发布的 Artifact：
+用户更新 HTML 时：
 
-1. 确认用户意图（替换 vs 新建版本）
-2. 替换通常需要用户先手动删除旧 `projects/{slug}/` 和 `gallery.json` 条目
-3. 或创建新 slug（如 `my-project-v2`）以避免覆盖
+```bash
+npm run import -- inbox/{slug} --update
+```
+
+- 覆盖 `projects/{slug}/` 文件
+- 保留 `gallery.json` 条目（可用 `--title` 等更新元数据）
+- **不要**向 Artifact HTML 注入返回按钮（返回在 `viewer.html` 顶栏）
+
+或直接替换 `projects/{slug}/` 内文件（元数据不变时）。
+
+或创建新 slug（如 `my-project-v2`）保留旧版本。
 
 ## 删除项目
 
