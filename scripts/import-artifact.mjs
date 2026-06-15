@@ -24,6 +24,7 @@ import {
   copyRecursive,
   getRepoName,
   formatIssueList,
+  injectGalleryBackButton,
 } from './utils.mjs';
 import { ensureThumbnail, thumbnailRelPath } from './thumbnail.mjs';
 
@@ -234,6 +235,10 @@ async function main() {
   if (!fs.existsSync(indexPath)) {
     console.error('导入后未找到 index.html。');
     process.exit(1);
+  }
+
+  if (injectGalleryBackButton(indexPath)) {
+    console.log('   ✅ 已添加返回 Gallery 按钮');
   }
 
   // Resource scan
