@@ -28,5 +28,21 @@
     "path": "./projects/pawbie-style-report/",
     "thumbnail": "./assets/thumbnails/pawbie-style-report.png",
     "featured": false
+  },
+  {
+    "id": "app-v1-structure",
+    "title": "Pawbie App 初版信息架构 Demo",
+    "description": "App 初版信息架构与页面流程的可交互原型演示。",
+    "type": "Prototype",
+    "date": "2026-06-15",
+    "tags": [
+      "Pawbie",
+      "IA",
+      "App",
+      "Prototype"
+    ],
+    "path": "./projects/app-v1-structure/",
+    "thumbnail": "./assets/thumbnails/app-v1-structure.png",
+    "featured": false
   }
 ]
