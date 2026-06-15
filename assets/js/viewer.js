@@ -23,7 +23,8 @@
   }
 
   const projectUrl = './projects/' + slug + '/';
-  frame.src = projectUrl;
+  const cacheBust = 'v=' + Date.now();
+  frame.src = projectUrl + '?' + cacheBust;
   directLink.href = projectUrl;
 
   fetch('./gallery.json', { cache: 'no-cache' })
