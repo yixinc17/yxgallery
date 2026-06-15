@@ -6,10 +6,14 @@
   "scripts": {
     "import": "node scripts/import-artifact.mjs",
     "validate": "node scripts/validate-gallery.mjs",
-    "dev": "node scripts/serve.mjs"
+    "dev": "node scripts/serve.mjs",
+    "thumbnails": "node scripts/capture-thumbnails.mjs"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.0.0"
   },
   "private": true
 }

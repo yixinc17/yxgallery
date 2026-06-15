@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-label="Pawbie Eye Demo - 图层版">
+  <rect width="640" height="400" fill="#ecfdf5"/>
+  <rect x="40" y="40" width="560" height="320" rx="16" fill="#fff" opacity="0.6"/>
+  <rect x="40" y="320" width="120" height="32" rx="16" fill="#10b981"/>
+  <text x="100" y="342" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#fff">Demo</text>
+  <text x="320" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="600" fill="#065f46">Pawbie Eye Demo - 图层版</text>
+</svg>

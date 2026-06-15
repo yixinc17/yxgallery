@@ -25,6 +25,7 @@ import {
   getRepoName,
   formatIssueList,
 } from './utils.mjs';
+import { ensureThumbnail, thumbnailRelPath } from './thumbnail.mjs';
 
 function parseArgs(argv) {
   const args = {
@@ -38,6 +39,8 @@ function parseArgs(argv) {
     featured: false,
     move: false,
     thumbnail: null,
+    noThumbnail: false,
+    placeholderOnly: false,
   };
 
   const positional = [];
@@ -52,6 +55,8 @@ function parseArgs(argv) {
     else if (arg === '--thumbnail') args.thumbnail = argv[++i];
     else if (arg === '--featured') args.featured = true;
     else if (arg === '--move') args.move = true;
+    else if (arg === '--no-thumbnail') args.noThumbnail = true;
+    else if (arg === '--placeholder-only') args.placeholderOnly = true;
     else if (arg === '--help' || arg === '-h') args.help = true;
     else if (!arg.startsWith('-')) positional.push(arg);
   }
@@ -74,7 +79,9 @@ Options:
   --type <type>         类型: ${VALID_TYPES.join(', ')}
   --tags <a,b,c>        逗号分隔标签
   --date <YYYY-MM-DD>   发布日期
-  --thumbnail <path>    缩略图相对路径
+  --thumbnail <path>    缩略图相对路径（默认自动截取）
+  --no-thumbnail        跳过缩略图生成
+  --placeholder-only    仅生成 SVG 占位图，不截图
   --featured            标记为精选
   --move                移动而非复制（默认复制）
   --help                显示帮助
@@ -155,7 +162,7 @@ function buildEntry(args, slug, indexPath) {
     : ['待补充'];
 
   const thumbnail =
-    args.thumbnail || `./assets/thumbnails/${slug}.svg`;
+    args.thumbnail || thumbnailRelPath(slug, 'png');
 
   return {
     id: slug,
@@ -179,7 +186,7 @@ function suggestRootRelativeFix(ref, projectSlug) {
   return `./${stripped}`;
 }
 
-function main() {
+async function main() {
   const args = parseArgs(process.argv.slice(2));
 
   if (args.help || !args.input) {
@@ -275,6 +282,24 @@ function main() {
   console.log(`   类型: ${entry.type}`);
   console.log(`   日期: ${entry.date}`);
 
+  // Thumbnail
+  if (!args.thumbnail && !args.noThumbnail) {
+    console.log('\n🖼  生成缩略图…');
+    const thumb = await ensureThumbnail({
+      slug,
+      title: entry.title,
+      type: entry.type,
+      projectDir: destDir,
+      preferScreenshot: !args.placeholderOnly,
+    });
+    entry.thumbnail = thumb.rel;
+    writeGallery(gallery);
+    console.log(`   ✅ ${thumb.method === 'screenshot' ? '截图' : '占位图'} → ${thumb.rel}`);
+  } else if (args.noThumbnail) {
+    entry.thumbnail = './assets/images/default-thumbnail.svg';
+    writeGallery(gallery);
+  }
+
   const repoName = getRepoName();
   const port = process.env.PORT || 4173;
 
@@ -291,7 +316,7 @@ function main() {
 }
 
 try {
-  main();
+  await main();
 } catch (err) {
   console.error(`\n❌ 导入失败: ${err.message}\n`);
   process.exit(1);

@@ -67,7 +67,16 @@ npm run import -- inbox/my-slides \
 - `tags` — 标签是否有意义（替换「待补充」）
 - `thumbnail` — 是否需要添加缩略图到 `assets/thumbnails/`
 
-### 5. 运行校验
+### 5. 生成缩略图
+
+导入时会自动尝试截图。如需补生成或更新：
+
+```bash
+npm run thumbnails
+npm run thumbnails -- <slug> --force
+```
+
+### 6. 运行校验
 
 ```bash
 npm run validate
@@ -75,7 +84,7 @@ npm run validate
 
 必须修复所有 **错误**，评估 **警告** 是否需要处理。
 
-### 6. 本地预览
+### 7. 本地预览
 
 ```bash
 npm run dev
@@ -89,7 +98,7 @@ npm run dev
 - [ ] Artifact 的视觉和交互完整
 - [ ] 404 页面链接正常
 
-### 7. 汇报
+### 8. 汇报
 
 向用户汇报：
 - 导入的项目 slug 和路径
@@ -98,7 +107,7 @@ npm run dev
 - 未来的 GitHub Pages 地址格式
 - 仍需用户手动完成的事项（如缩略图、元数据完善）
 
-### 8. Git 提交
+### 9. Git 提交
 
 **仅在用户明确要求时**执行 commit：
 
@@ -110,7 +119,7 @@ git commit -m "add: <项目标题>"
 
 **未经用户明确要求，不要执行 `git push`。**
 
-### 9. 发布到 GitHub Pages
+### 10. 发布到 GitHub Pages
 
 **仅在用户明确要求发布时**：
 

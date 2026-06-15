@@ -149,11 +149,19 @@ npm run validate
 
 ## 如何替换缩略图
 
-1. 将图片放入 `assets/thumbnails/{slug}.png`（或 `.svg`、`.jpg`）
-2. 更新 `gallery.json` 中该项目的 `thumbnail` 字段
-3. 运行 `npm run validate`
+导入时会**自动截取**项目首页截图（需 Puppeteer）。也可手动批量生成：
 
-缺少缩略图时，首页显示默认占位图。
+```bash
+npm install          # 首次需安装 puppeteer
+npm run thumbnails   # 为全部项目生成/更新缩略图
+npm run thumbnails -- eye-demo   # 仅单个项目
+npm run thumbnails -- --force    # 覆盖已有缩略图
+npm run thumbnails -- --placeholder-only   # 仅 SVG 占位图（不截图）
+```
+
+截图保存在 `assets/thumbnails/{slug}.png`。若 Puppeteer 不可用或截图失败，会自动生成带标题和类型的 SVG 占位图。
+
+也可手动将图片放入 `assets/thumbnails/` 并更新 `gallery.json` 中的 `thumbnail` 字段。
 
 ## 不应上传的内容
 

@@ -1,19 +1,5 @@
 [
   {
-    "id": "pawbie-app-visual-direction",
-    "title": "Pawbie App Visual Direction",
-    "description": "Visual direction exploration for the Pawbie companion app.",
-    "type": "Slides",
-    "date": "2026-06-15",
-    "tags": [
-      "Pawbie",
-      "UI Design"
-    ],
-    "path": "./projects/pawbie-app-visual-direction/",
-    "thumbnail": "./assets/thumbnails/pawbie-app-visual-direction.svg",
-    "featured": true
-  },
-  {
     "id": "eye-demo",
     "title": "Pawbie Eye Demo - 图层版",
     "description": "Pawbie 眼睛交互 Demo，基于 p5.js 的图层版可视化。",
@@ -25,7 +11,7 @@
       "p5.js"
     ],
     "path": "./projects/eye-demo/",
-    "thumbnail": "./assets/thumbnails/eye-demo.svg",
+    "thumbnail": "./assets/thumbnails/eye-demo.png",
     "featured": false
   },
   {
@@ -40,35 +26,7 @@
       "Report"
     ],
     "path": "./projects/pawbie-style-report/",
-    "thumbnail": "./assets/thumbnails/pawbie-style-report.svg",
-    "featured": false
-  },
-  {
-    "id": "interaction-color-picker",
-    "title": "Interaction Color Picker",
-    "description": "A small interactive demo exploring color selection patterns.",
-    "type": "Demo",
-    "date": "2026-06-10",
-    "tags": [
-      "Interaction",
-      "CSS"
-    ],
-    "path": "./projects/interaction-color-picker/",
-    "thumbnail": "./assets/thumbnails/interaction-color-picker.svg",
-    "featured": false
-  },
-  {
-    "id": "weekly-notes-june",
-    "title": "Weekly Notes — June 2026",
-    "description": "A single-page document summarizing weekly progress and decisions.",
-    "type": "Document",
-    "date": "2026-06-01",
-    "tags": [
-      "Notes",
-      "Writing"
-    ],
-    "path": "./projects/weekly-notes-june/",
-    "thumbnail": "./assets/thumbnails/weekly-notes-june.svg",
+    "thumbnail": "./assets/thumbnails/pawbie-style-report.png",
     "featured": false
   }
 ]
