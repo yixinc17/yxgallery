@@ -1,0 +1,15 @@
+{
+  "name": "artifact-gallery",
+  "version": "1.0.0",
+  "description": "Personal Artifact Gallery for HTML documents, slides, demos and prototypes",
+  "type": "module",
+  "scripts": {
+    "import": "node scripts/import-artifact.mjs",
+    "validate": "node scripts/validate-gallery.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction Color Picker</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="demo">
+    <h1>Color Picker Demo</h1>
+    <p class="hint">拖动滑块或点击色块选择颜色</p>
+
+    <div class="preview" id="preview"></div>
+    <p class="hex" id="hex">#10b981</p>
+
+    <input type="range" id="hue" min="0" max="360" value="160" aria-label="色相">
+
+    <div class="presets" role="group" aria-label="预设颜色">
+      <button type="button" data-color="#10b981" style="background:#10b981" aria-label="绿色"></button>
+      <button type="button" data-color="#06b6d4" style="background:#06b6d4" aria-label="青色"></button>
+      <button type="button" data-color="#8b5cf6" style="background:#8b5cf6" aria-label="紫色"></button>
+      <button type="button" data-color="#ef4444" style="background:#ef4444" aria-label="红色"></button>
+      <button type="button" data-color="#f59e0b" style="background:#f59e0b" aria-label="橙色"></button>
+    </div>
+
+    <p><a href="../../index.html">← 返回 Gallery</a></p>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

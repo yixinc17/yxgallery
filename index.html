@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Artifact Gallery — HTML documents, slides, demos and prototypes.">
+  <title>Artifact Gallery</title>
+  <link rel="stylesheet" href="./assets/css/gallery.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Artifact Gallery</h1>
+      <p class="site-subtitle">HTML 文档、Slides、交互 Demo 与网页原型</p>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="controls" aria-label="筛选与搜索">
+      <div class="search-row">
+        <label for="search-input" class="visually-hidden">搜索项目</label>
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="搜索标题、描述或标签…"
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="filter-row" role="group" aria-label="按类型筛选">
+        <button type="button" class="filter-btn is-active" data-type="all" aria-pressed="true">全部</button>
+        <button type="button" class="filter-btn" data-type="Slides" aria-pressed="false">Slides</button>
+        <button type="button" class="filter-btn" data-type="Document" aria-pressed="false">Document</button>
+        <button type="button" class="filter-btn" data-type="Prototype" aria-pressed="false">Prototype</button>
+        <button type="button" class="filter-btn" data-type="Demo" aria-pressed="false">Demo</button>
+        <button type="button" class="filter-btn" data-type="Website" aria-pressed="false">Website</button>
+        <button type="button" class="filter-btn" data-type="Experiment" aria-pressed="false">Experiment</button>
+      </div>
+
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+    </section>
+
+    <div id="status-message" class="status-message" role="status" aria-live="polite" hidden></div>
+
+    <section id="gallery-grid" class="gallery-grid" aria-label="项目列表">
+      <!-- Cards rendered by gallery.js -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Artifact Gallery — 静态 HTML 作品档案库</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/gallery.js"></script>
+</body>
+</html>
