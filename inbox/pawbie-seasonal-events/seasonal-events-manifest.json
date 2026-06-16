@@ -1,0 +1,126 @@
+{
+  "subject": "Pawbie",
+  "subjectKind": "desktop AI pet",
+  "sourceReference": "Physical three-color product image: white, pink, and pale blue Pawbie units, with pink centered.",
+  "productFidelity": {
+    "body": "rounded-square fluffy blob body, not a perfect sphere",
+    "heroColor": "pink",
+    "supportingColors": ["white", "pale blue"],
+    "eyes": "glossy blue-cyan electronic screen eyes with expression states",
+    "nose": "small black rounded camera-like dot",
+    "feet": "small solid oval feet in a gray-white silicone material, not transparent",
+    "placement": "static desktop companion; can be picked up but does not roam"
+  },
+  "avoid": [
+    "transparent feet",
+    "animal paws",
+    "generic plush dog or bear",
+    "cold sci-fi robot body",
+    "childish clutter",
+    "readable text inside generated images",
+    "fake logos, dates, badges, or claims"
+  ],
+  "scenes": [
+    {
+      "id": "spring-desk-bloom",
+      "seasonOrMoment": "Spring",
+      "businessUse": ["March/April IG post", "fresh-start product reveal"],
+      "summary": "Pawbie in a fresh spring desk setup with soft flowers and morning light.",
+      "prompt": "Single lifestyle product photograph of Pawbie as a pink rounded-square fluffy desktop AI pet with large glossy blue-cyan electronic screen eyes, tiny black nose, and small solid gray-white silicone oval feet. White and pale blue variants sit softly behind. Pawbie rests on a warm desk with fresh spring flowers, blank notebook, pale morning light, and clean negative space. Light-premium, adult, warm, no readable text or logos."
+    },
+    {
+      "id": "rainy-day-window-companion",
+      "seasonOrMoment": "Rainy day",
+      "businessUse": ["emotional companionship post", "rainy-season social"],
+      "summary": "Pawbie beside a rain-streaked window as a quiet indoor presence.",
+      "prompt": "Single cinematic indoor photograph of pink Pawbie near a rain-streaked window, with rounded-square fluffy body, blue-cyan electronic screen eyes glowing softly, small black nose, and solid gray-white silicone oval feet. Warm lamp, cup, and soft blanket nearby. Calm adult home mood, private emotional presence, no therapy claim, no text."
+    },
+    {
+      "id": "summer-night-desk-glow",
+      "seasonOrMoment": "Summer night",
+      "businessUse": ["creator desk setup", "summer campaign"],
+      "summary": "Late-night desk-life companion with soft blue-pink ambient light.",
+      "prompt": "Single warm summer-night desk scene with pink Pawbie as a rounded-square fluffy desktop AI pet, blue-cyan electronic screen eyes, black camera-like nose, and small gray-white silicone oval feet. Include soft fan shadow, iced drink with no label, closed notebook, and subtle blue-pink ambient light. Adult desk setup, no readable text."
+    },
+    {
+      "id": "autumn-reset-table",
+      "seasonOrMoment": "Autumn reset",
+      "businessUse": ["September routine campaign", "study/work companion"],
+      "summary": "Pawbie in a warm back-to-routine desk moment.",
+      "prompt": "Single editorial lifestyle photograph of pink Pawbie on an autumn desk with tea cup, blank planner, soft sweater texture, muted leaves outside a window, and warm clean composition. Preserve rounded-square fluffy body, blue-cyan electronic eyes, black nose, and solid gray-white silicone oval feet. No readable text."
+    },
+    {
+      "id": "first-snow-shelf",
+      "seasonOrMoment": "First snow",
+      "businessUse": ["winter post", "holiday gift lead-in"],
+      "summary": "The three-color Pawbie family near a snowy window, with pink as emotional hero.",
+      "prompt": "Single cozy winter interior photograph of three Pawbie color variants on a side table near a snowy window: pink centered, white and pale blue supporting. Each has a rounded-square fluffy body, blue-cyan electronic screen eyes, small black nose, and solid gray-white silicone oval feet. Warm lamp, knit fabric, ceramic mug with no text."
+    },
+    {
+      "id": "valentines-soft-bond",
+      "seasonOrMoment": "Valentine's Day",
+      "businessUse": ["self-gifting", "emotional bond post"],
+      "summary": "A tasteful Valentine's scene for one-owner bond and self-gifting.",
+      "prompt": "Single premium Valentine's product photograph of pink Pawbie on a warm white desk with a simple ribbon, blank card, and soft rose lighting. Pawbie has rounded-square fluffy body, blue-cyan electronic screen eyes, small black nose, and solid gray-white silicone oval feet. Tasteful, adult, no hearts overload, no readable text."
+    },
+    {
+      "id": "halloween-costume-table",
+      "seasonOrMoment": "Halloween",
+      "businessUse": ["magnetic hats", "seasonal social engagement"],
+      "summary": "A tasteful accessory table using Halloween as a styling moment.",
+      "prompt": "Single editorial Halloween styling scene for pink Pawbie with rounded-square fluffy body, blue-cyan electronic screen eyes, black nose, and solid gray-white silicone oval feet. Include tasteful magnetic hat accessories, soft orange and cream accents, organized tray, playful but adult, no readable text or logos."
+    },
+    {
+      "id": "christmas-gift-morning",
+      "seasonOrMoment": "Christmas",
+      "businessUse": ["gift guide", "holiday Kickstarter update"],
+      "summary": "Pawbie introduced as a refined holiday gift, not toy clutter.",
+      "prompt": "Single premium Christmas gift-morning product photograph of pink Pawbie emerging from minimal warm-white packaging, with soft tree bokeh, ribbon, charging puck, and accessories nearby. Preserve rounded-square fluffy body, blue-cyan electronic eyes, black nose, and solid gray-white silicone oval feet. No visible brand text or logos."
+    },
+    {
+      "id": "lunar-new-year-desk-blessing",
+      "seasonOrMoment": "Lunar New Year",
+      "businessUse": ["Asia-facing social", "seasonal campaign"],
+      "summary": "Warm new-start scene with tasteful red and gold accents.",
+      "prompt": "Single premium Lunar New Year desktop scene with pink Pawbie, warm lantern glow, blank red envelopes, subtle gold detail, and clean adult styling. Pawbie is a rounded-square fluffy desktop AI pet with blue-cyan electronic eyes, black nose, and solid gray-white silicone oval feet. No readable Chinese characters or logos."
+    },
+    {
+      "id": "moving-into-first-apartment",
+      "seasonOrMoment": "Major life moment",
+      "businessUse": ["solo-living positioning", "young adult campaign"],
+      "summary": "Pawbie arrives in a first apartment as a companion for independence.",
+      "prompt": "Single lifestyle photograph of pink Pawbie on a new apartment desk beside moving box, keys, small lamp, and folded throw. Pawbie has a rounded-square fluffy body, blue-cyan electronic screen eyes, tiny black nose, and small solid gray-white silicone oval feet. Warm morning light, first-home feeling, no readable text."
+    },
+    {
+      "id": "kickstarter-launch-day",
+      "seasonOrMoment": "Launch event",
+      "businessUse": ["Kickstarter launch post", "profile pinned image"],
+      "summary": "Clean launch hero with celebratory energy and empty copy space.",
+      "prompt": "Single IG launch hero image of pink Pawbie centered on a warm white set, with soft blue-pink light, subtle celebratory paper shapes, and large empty space for later deterministic Kickstarter copy. Preserve rounded-square fluffy body, blue-cyan electronic screen eyes, small black nose, and solid gray-white silicone oval feet. No readable text."
+    },
+    {
+      "id": "pride-month-desk-color",
+      "seasonOrMoment": "Pride Month",
+      "businessUse": ["inclusive brand content", "self-expression"],
+      "summary": "A refined spectrum-light scene about self-expression and chosen companion.",
+      "prompt": "Single refined desk scene with pink Pawbie and subtle soft rainbow reflections in its blue-cyan electronic screen eyes, plus tasteful spectrum-colored accessories on a warm neutral background. Pawbie has rounded-square fluffy body, black nose, and solid gray-white silicone oval feet. Sincere, refined, no readable text."
+    },
+    {
+      "id": "black-friday-calm-drop",
+      "seasonOrMoment": "Black Friday / Cyber Monday",
+      "businessUse": ["limited reward tier", "waitlist push", "sale announcement"],
+      "summary": "A calm commerce moment that avoids cheap discount graphics.",
+      "prompt": "Single premium commerce product photograph of pink Pawbie with minimal packaging and accessory tray on a warm white background, clean empty zone for deterministic offer copy. Pawbie has rounded-square fluffy body, blue-cyan electronic eyes, small black nose, and solid gray-white silicone oval feet. No sale text, no fake badges."
+    }
+  ],
+  "recommendedFirstBatch": [
+    "rainy-day-window-companion",
+    "christmas-gift-morning",
+    "lunar-new-year-desk-blessing",
+    "moving-into-first-apartment",
+    "kickstarter-launch-day",
+    "halloween-costume-table",
+    "summer-night-desk-glow",
+    "first-snow-shelf"
+  ]
+}

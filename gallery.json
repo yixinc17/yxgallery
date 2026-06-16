@@ -1,5 +1,22 @@
 [
   {
+    "id": "pawbie-seasonal-events",
+    "title": "Pawbie 季节节日广告创意测试",
+    "description": "Codex plugin-creative production 测试：23 个季节/节日/重大时刻主题的 Pawbie 广告视觉方案。",
+    "type": "Experiment",
+    "date": "2026-06-16",
+    "tags": [
+      "Pawbie",
+      "Codex",
+      "Creative",
+      "Seasonal",
+      "Ads"
+    ],
+    "path": "./projects/pawbie-seasonal-events/",
+    "thumbnail": "./assets/thumbnails/pawbie-seasonal-events.svg",
+    "featured": false
+  },
+  {
     "id": "eye-demo",
     "title": "Pawbie Eye Demo - 图层版",
     "description": "Pawbie 眼睛交互 Demo，基于 p5.js 的图层版可视化。",
