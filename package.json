@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "import": "node scripts/import-artifact.mjs",
+    "publish": "node scripts/publish-artifact.mjs",
     "validate": "node scripts/validate-gallery.mjs",
     "dev": "node scripts/serve.mjs",
     "thumbnails": "node scripts/capture-thumbnails.mjs"

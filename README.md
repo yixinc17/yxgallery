@@ -105,11 +105,37 @@ npm run validate
 | 只更新了 `inbox/` 却不跑命令 | `npm run import -- inbox/xxx --update` |
 | 在 Artifact HTML 里加返回按钮 | 首页「打开项目」走 `viewer.html`，HTML 保持原样 |
 
+### 一键发布（推荐）
+
+```bash
+# 新项目（若 slug 已存在会报错，防止误覆盖）
+npm run publish -- inbox/my-new-demo --type Demo
+
+# 更新已有项目
+npm run publish -- inbox/eye-demo --update
+
+# 自动判断新建 / 更新，并推送到 GitHub
+npm run publish -- inbox/eye-demo --auto --push
+
+# 自定义 commit 信息
+npm run publish -- inbox/eye-demo --update -m "update: eye-demo v2"
+```
+
+`publish` = `import` → `validate` → `git commit`（默认**不** push，加 `--push` 才推送）。
+
+| 参数 | 作用 |
+|------|------|
+| （默认） | 新建；已存在则报错 |
+| `--update` | 覆盖已有 `projects/{slug}/` |
+| `--auto` | 存在则更新，不存在则新建 |
+| `--push` | commit 后 `git push origin main` |
+
 ### 完整流程一览
 
 ```
-新作品：  inbox/ → import → validate → push
-更新：    inbox/ → import --update → validate → push
+新作品：  inbox/ → publish
+更新：    inbox/ → publish --update
+上线：    加 --push，或手动 git push
 ```
 
 ## 如何放入新 HTML

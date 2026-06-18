@@ -33,9 +33,13 @@ ls -la inbox/
   - ✅ 相对路径（`./images/foo.png`、`../shared/style.css`）
   - ✅ 外部 URL（`https://...`）— 保持不变
 
-### 3. 执行导入
+### 3. 执行导入或一键发布
 
 ```bash
+# 推荐：导入 + 校验 + commit（加 --push 才推送）
+npm run publish -- inbox/<项目名> --auto --push
+
+# 或分步
 npm run import -- inbox/<项目名或文件>
 ```
 

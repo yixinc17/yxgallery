@@ -500,6 +500,226 @@
 
   <main class="page">
     <section>
+      <h2>0. 投票结果复盘与高保真方向</h2>
+      <p class="note" style="margin-bottom: 18px;">本节基于团队投票截图整理：红心代表特别喜欢，OK 代表可以接受。根据这些偏好信号，后续产出了 A「Stable Final System」、B「3D + Flat Color Blocks」、C「Expressive Exploration」三个高保真方向，并分别扩展 5 组 UI 展示图。当前收束更偏向 A 与 B：以 A 的稳定结构和可落地性为基础，重点吸收 B 的真实 3D Pawbie 与平面色块组合；C 主要作为 onboarding、mood 和状态表达的补充参考。</p>
+      <div class="card soft" style="margin-bottom: 22px;">
+        <div class="card-body">
+          <h3>当前收束判断</h3>
+          <p>Pawbie 的最终方向应收束为：<strong>Pawbie 本体与少量环境偏真实拟物，界面主体保持平面、清晰、app-native；只用微量 Material 3 Expressive 式的颜色情绪表达建立状态和层级。</strong>也就是说，拟物负责“它真实存在”，平面 UI 负责“它好用、轻快、现代”。</p>
+          <ul class="list" style="margin-top: 12px;">
+            <li>Pawbie 本体颜色、毛绒质感、眼睛、鼻子、体型必须锁定，不随 UI 配色方案改变。</li>
+            <li>少色/单色只应用在界面 surface、按钮、mood chip、entry highlight、active state 上。</li>
+            <li>Home 可以最具真实感；Diary 用真实缩略图与少量情绪色；Settings 和功能流尽量平面、高效。</li>
+            <li>Material 3 Expressive 的借鉴点是层级、形状、尺寸、动效和少量状态色，不是把页面做成平均彩色。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid cols-2" style="margin-bottom: 22px;">
+        <div class="card">
+          <img src="assets/reference/votes/vote-01-skeuo-warm-heart.png" alt="Vote result warm skeuomorphic Pawbie UI with hearts">
+          <div class="card-body">
+            <h3>红心集中：温暖拟物 + 真实 Pawbie</h3>
+            <p>两组红心都落在毛绒 Pawbie、暖光桌面、真实小场景、柔软控件和 Diary 照片卡片上。说明团队对“Pawbie 是真实存在的陪伴物”这件事有强烈共识。</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/reference/votes/vote-04-memory-board-heart.png" alt="Vote result memory board Pawbie UI with heart">
+          <div class="card-body">
+            <h3>红心延伸：Diary 不只是列表</h3>
+            <p>记忆板、照片型日记、单条 memory detail 也被喜欢。可取点不是打破 MD，而是让 Diary 的内容更像 Pawbie 看到的生活证据：照片、时间、心情、短句观察。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card soft" style="margin-bottom: 22px;">
+        <div class="card-body">
+          <h3>投票截图归档</h3>
+          <p class="note" style="margin-bottom: 14px;">以下为本轮评审标注原图，保留红心与 OK 的原始位置，便于团队复核偏好来源。</p>
+          <div class="grid cols-4">
+            <img src="assets/reference/votes/vote-01-skeuo-warm-heart.png" alt="Vote 01 warm skeuomorphic two hearts">
+            <img src="assets/reference/votes/vote-02-soft-skeuo-heart.png" alt="Vote 02 soft skeuomorphic hearts">
+            <img src="assets/reference/votes/vote-03-editorial-skeuo-ok-heart.png" alt="Vote 03 editorial skeuomorphic ok and heart">
+            <img src="assets/reference/votes/vote-04-memory-board-heart.png" alt="Vote 04 memory board heart">
+            <img src="assets/reference/votes/vote-05-graphic-onboarding-heart.png" alt="Vote 05 graphic onboarding heart">
+            <img src="assets/reference/votes/vote-06-ledger-heart.png" alt="Vote 06 ledger direction heart">
+            <img src="assets/reference/votes/vote-07-overview-map.png" alt="Vote 07 overview map with ok and hearts">
+          </div>
+        </div>
+      </div>
+
+      <div class="grid cols-3" style="margin-bottom: 22px;">
+        <div class="card soft">
+          <div class="card-body">
+            <h3>大家偏好的核心</h3>
+            <ul class="list">
+              <li>真实毛绒质感比纯扁平 IP 更有陪伴感。</li>
+              <li>暖白、奶油、木色、鼠尾草绿、低饱和蓝紫更容易被接受。</li>
+              <li>Diary 中的真实缩略图、mood dots、时间线让“被观察”更可信。</li>
+              <li>Switch Pawbie / bottom sheet 这种柔软浮层有清晰产品价值。</li>
+              <li>Home 的舞台感重要：小地毯、桌面、窗光、植物、台灯都强化“它在你身边”。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card soft">
+          <div class="card-body">
+            <h3>OK 里的可借元素</h3>
+            <ul class="list">
+              <li>粗线图形和高彩 onboarding 适合偏好选择、主题选择，不适合作为全局主 UI。</li>
+              <li>ledger / receipt 方向有差异化，可借日期、编号、表格、归档感，但要降低纸质老派感。</li>
+              <li>深色高彩方案适合夜间模式或实验支线，不适合作为默认首页。</li>
+              <li>纯色块方向可作为轻量状态卡和 onboarding 局部语言，但不能牺牲 Pawbie 的真实感。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card soft">
+          <div class="card-body">
+            <h3>需要避免</h3>
+            <ul class="list">
+              <li>老式纸张、厚重米黄、仿皮革/羊皮纸质感，会让拟物显旧。</li>
+              <li>过多 bevel、内阴影、发黄卡片，会像早期 iOS skeuomorphism。</li>
+              <li>每个页面都堆真实场景，会降低信息效率；拟物应集中在 Hero、Diary 内容和关键浮层。</li>
+              <li>字体过童趣、贴纸过多，会削弱成人陪伴产品的可信度。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <table class="matrix" style="margin-bottom: 22px;">
+        <thead>
+          <tr>
+            <th>下一步高保真方向</th>
+            <th>怎么做</th>
+            <th>要验证什么</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Modern Tactile Pawbie</td>
+            <td>保留 3D 毛绒 Pawbie 和真实光影；UI 控件改成更轻的半透明/柔软材质，减少纸张老派感。</td>
+            <td>是否能同时保留红心里的陪伴感，并让界面看起来更 2026。</td>
+          </tr>
+          <tr>
+            <td>Living Memory Diary</td>
+            <td>MD 结构不变：Date header + sticky week + pull hint + vertical entries；但 entry 加真实照片、mood dot、短句观察和轻量时间线。</td>
+            <td>Diary 是否比普通日志更像 Pawbie 的“记忆”。</td>
+          </tr>
+          <tr>
+            <td>Soft Utility System</td>
+            <td>Settings、Switch、Device Updates 使用清爽白底、轻浮层、软按钮、清楚图标；不做沉重拟物。</td>
+            <td>功能页是否足够清晰，不被角色和场景抢走效率。</td>
+          </tr>
+          <tr>
+            <td>Graphic Onboarding Accent</td>
+            <td>把高彩、粗线、主题卡用于 onboarding、mood/theme 选择和空态；主界面保持温暖克制。</td>
+            <td>是否能吸收 OK/红心里的活力，同时不让主 app 低龄化。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="card-body">
+            <h3>Material 3 Expressive：更适合 Pawbie 的主参考</h3>
+            <p>Material 3 Expressive 的价值不是“更花”，而是把情绪、注意力和可用性系统化：用更明确的色块、形状、尺寸、动效和层级，让关键动作更容易被看到，也让产品更有性格。对 Pawbie 来说，它比传统拟物更适合作为 UI 方法论：Home 可以更情绪化，Diary 可以更会讲故事，Settings 仍保持清晰和高效。</p>
+            <ul class="list" style="margin-top: 12px;">
+              <li>用 expressive color 标出 mood、today、active tab、important memory。</li>
+              <li>用不同形状区分模块：Hero 更柔软，Diary entry 更稳定，CTA 更明确。</li>
+              <li>动效服务情绪反馈：Pawbie blink、mood dot bounce、entry appear，而不是装饰性大动画。</li>
+              <li>强调“可扫读”：大标题、清楚状态、强主次，而不是所有卡片都同等可爱。</li>
+              <li>重要约束：expressive color 只作用于 UI 状态，不改变 Pawbie 本体颜色和角色设定。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>对 Pawbie 的具体转译</h3>
+            <ul class="list">
+              <li>Home：用一个强情绪 Hero 承载 Pawbie 状态，CTA 和 mood chip 用高识别色。</li>
+              <li>Diary：重要记忆放大，普通观察压缩；用 entry 尺寸表达记忆权重。</li>
+              <li>Settings：色彩只用于分组和图标容器，避免功能页被装饰化。</li>
+              <li>Onboarding：可以更 expressive，用大色块和主题卡帮助用户选择 Pawbie 的观察范围。</li>
+              <li>Motion：小而有意义，例如状态切换、日记新增、Pawbie 眨眼，不做大面积炫技。</li>
+              <li>界面少色时，Pawbie 仍保持原本粉/白/蓝等品牌形象，不被主题色染色。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Liquid Glass：可借材质逻辑，不建议大面积采用</h3>
+            <p>Apple Liquid Glass 的启发在于“动态材料”：半透明、折射、环境响应、浮层深度。但 Pawbie 不建议把它作为主视觉，因为毛玻璃和实时折射会增加渲染压力，也容易影响 Diary 文本可读性；在低端设备或长列表滚动里，过多 blur / backdrop filter / 动态高光可能造成卡顿和耗电。</p>
+            <ul class="list">
+              <li>可借：bottom sheet、toast、modal 的轻透明层级。</li>
+              <li>少用：全屏玻璃背景、长列表玻璃卡片、复杂折射动效。</li>
+              <li>避免：Diary 文本叠在模糊背景上，或控件依赖高成本实时 blur。</li>
+              <li>性能策略：只在小面积浮层使用静态半透明，优先用浅色 surface + 阴影模拟深度。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Pawbie 的“现代拟物”落地规则</h3>
+            <ul class="list">
+              <li>真实感留给 Pawbie 本体、照片型 Diary 和少量生活场景。</li>
+              <li>UI 本体采用 Material 3 Expressive 式的色块、形状和动效，而不是老式纸张/皮革。</li>
+              <li>用 soft ceramic、fabric-like softness、subtle depth 表达触感，避免厚 bevel 和发黄卡片。</li>
+              <li>拟物和扁平混用：角色/场景真实，导航/日历/设置保持 app-native。</li>
+              <li>所有材质效果必须先满足滚动流畅、文字对比度和电量友好。</li>
+            </ul>
+            <p class="note" style="margin-top: 12px;">参考：<a href="https://m3.material.io/blog/building-with-m3-expressive">M3 Expressive: Engaging UX Design</a>、<a href="https://developer.apple.com/documentation/technologyoverviews/liquid-glass">Apple Liquid Glass</a>、<a href="https://developer.microsoft.com/fluentui">Microsoft Fluent</a>。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card soft" style="margin-top: 22px;">
+        <div class="card-body">
+          <h3>确认后的三个高保真探索方向</h3>
+          <p class="note" style="margin-bottom: 14px;">三个方向共享同一 Pawbie 角色锁定与 MD 信息架构：A 提供稳定落地基准；B 探索 3D Pawbie 与平面色块的简洁趣味；C 探索更强的 Material 3 Expressive 情绪表达。最终可采用 A 的结构、B 的角色与色块组合，并少量吸收 C 的 onboarding 和状态表达。</p>
+          <div class="scheme-grid">
+            <article class="scheme-card">
+              <img src="assets/generated/trend-forward-preview/trend-06-component-board.png" alt="Pawbie direction A stable final system">
+              <div class="card-body"><h3>A · Stable Final System</h3><p>以 06 为基准：最稳定、最接近规范、少色平面 UI 与真实 Pawbie 的完整系统。</p></div>
+            </article>
+            <article class="scheme-card">
+              <img src="assets/generated/trend-forward-preview/trend-03-limited-expressive.png" alt="Pawbie direction B 3D and flat color blocks">
+              <div class="card-body"><h3>B · 3D + Flat Color Blocks</h3><p>以 03 为基准：真实 3D Pawbie 搭配少量平面情绪色块，简洁但更有趣。</p></div>
+            </article>
+            <article class="scheme-card">
+              <img src="assets/generated/material-expressive/material-expressive-02-onboarding-home-diary.png" alt="Pawbie direction C expressive exploration">
+              <div class="card-body"><h3>C · Expressive Exploration</h3><p>以当前 Expressive 02 为基准：更强的形状、色彩和情绪表现；只参考视觉，IA 以 MD 为准。</p></div>
+            </article>
+          </div>
+
+          <h3 style="margin-top: 28px;">A · Stable Final System / 5 组</h3>
+          <div class="scheme-grid">
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/A-stable-final/a-01.png" alt="Direction A stable final variant 01"><div class="card-body"><h3>A01 · Core Screens</h3><p>Home、Diary、Settings 的稳定主框架。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/A-stable-final/a-02.png" alt="Direction A stable final variant 02"><div class="card-body"><h3>A02 · Utility Flow</h3><p>Home、Switch 与 Device Updates 的工具层级。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/A-stable-final/a-03.png" alt="Direction A stable final variant 03"><div class="card-body"><h3>A03 · Memory Diary</h3><p>重要记忆、普通观察与详情页的层级。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/A-stable-final/a-04.png" alt="Direction A stable final variant 04"><div class="card-body"><h3>A04 · Calm Onboarding</h3><p>克制、少色、成熟的首次使用流程。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/A-stable-final/a-05.png" alt="Direction A stable final variant 05"><div class="card-body"><h3>A05 · System Board</h3><p>Hero、日记卡、Sheet、控件和状态组件。</p></div></article>
+          </div>
+
+          <h3 style="margin-top: 28px;">B · 3D + Flat Color Blocks / 5 组</h3>
+          <div class="scheme-grid">
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/B-3d-flat-blocks/b-01.png" alt="Direction B 3D flat blocks variant 01"><div class="card-body"><h3>B01 · Mood Blocks</h3><p>3D Pawbie 与有限情绪色块的基础组合。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/B-3d-flat-blocks/b-02.png" alt="Direction B 3D flat blocks variant 02"><div class="card-body"><h3>B02 · Geometric Layout</h3><p>更强的平面构成与页面分区。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/B-3d-flat-blocks/b-03.png" alt="Direction B 3D flat blocks variant 03"><div class="card-body"><h3>B03 · Minimal Play</h3><p>更少颜色、更大留白、更聚焦 Pawbie。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/B-3d-flat-blocks/b-04.png" alt="Direction B 3D flat blocks variant 04"><div class="card-body"><h3>B04 · Dark Accent</h3><p>用黑色导航与 CTA 加强成熟度和对比。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/B-3d-flat-blocks/b-05.png" alt="Direction B 3D flat blocks variant 05"><div class="card-body"><h3>B05 · Component Board</h3><p>3D 角色、色块 Hero、mood 与 memory 组件。</p></div></article>
+          </div>
+
+          <h3 style="margin-top: 28px;">C · Expressive Exploration / 5 组</h3>
+          <div class="scheme-grid">
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/C-expressive-exploration/c-01.png" alt="Direction C expressive variant 01"><div class="card-body"><h3>C01 · Theme + Home</h3><p>主题选择、情绪 Hero 与 Diary 的高表达组合。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/C-expressive-exploration/c-02.png" alt="Direction C expressive variant 02"><div class="card-body"><h3>C02 · Mood States</h3><p>不同 mood 下的形状、状态色与页面节奏。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/C-expressive-exploration/c-03.png" alt="Direction C expressive variant 03"><div class="card-body"><h3>C03 · Onboarding</h3><p>角色锁定后的情绪与 Diary 主题选择。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/C-expressive-exploration/c-04.png" alt="Direction C expressive variant 04"><div class="card-body"><h3>C04 · Expressive Core</h3><p>Home、Diary、Settings 的有限高表达色。</p></div></article>
+            <article class="scheme-card"><img src="assets/generated/final-three-directions/C-expressive-exploration/c-05.png" alt="Direction C expressive variant 05"><div class="card-body"><h3>C05 · Component Board</h3><p>mood fields、shape tokens、memory weight 与 CTA。</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <h2>1. Pawbie App 规范摘要</h2>
       <div class="ia-map">
         <div class="ia-node home">
@@ -1551,7 +1771,7 @@ Strictly flat vector app UI; no Lex branding; no outlined cards; no black stroke
       const lightboxImage = document.getElementById("lightbox-image");
       const lightboxTitle = document.getElementById("lightbox-title");
       const closeButton = document.getElementById("lightbox-close");
-      const generatedImages = Array.from(document.querySelectorAll('img[src^="assets/generated/"]'));
+      const generatedImages = Array.from(document.querySelectorAll('img[src^="assets/generated/"], img[src^="assets/reference/votes/"]'));
 
       function openLightbox(image) {
         lightboxImage.src = image.currentSrc || image.src;
