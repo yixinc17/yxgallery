@@ -1,5 +1,21 @@
 [
   {
+    "id": "pawbie-branding-palette-explore",
+    "title": "Pawbie Palette Exploration",
+    "description": "Pawbie 品牌色板与配色方向探索。",
+    "type": "Experiment",
+    "date": "2026-06-18",
+    "tags": [
+      "Pawbie",
+      "Branding",
+      "Palette",
+      "Design"
+    ],
+    "path": "./projects/pawbie-branding-palette-explore/",
+    "thumbnail": "./assets/thumbnails/pawbie-branding-palette-explore.svg",
+    "featured": false
+  },
+  {
     "id": "pawbie-seasonal-events",
     "title": "Pawbie 季节节日广告创意测试",
     "description": "Codex plugin-creative production 测试：23 个季节/节日/重大时刻主题的 Pawbie 广告视觉方案。",
