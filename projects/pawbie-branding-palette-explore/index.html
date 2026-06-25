@@ -265,6 +265,300 @@
       margin: 30px 0 24px;
       align-items: stretch;
     }
+    .latest-system {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+      gap: 22px;
+      margin: 34px 0 34px;
+      padding: 22px;
+      border: 1px solid rgba(74,51,44,0.14);
+      border-radius: 20px;
+      background: #FFFCF8;
+    }
+    .latest-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .latest-kicker {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: #4A332C;
+      color: #FBF7F0;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .latest-copy h2 {
+      margin: 0;
+      color: #4A332C;
+      font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .latest-copy p {
+      margin: 0;
+      color: #8A7B6A;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+    .system-swatches {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .system-swatch {
+      min-height: 86px;
+      border: 1px solid rgba(74,51,44,0.1);
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      color: #4A332C;
+    }
+    .system-swatch.dark {
+      color: #FFFCF8;
+    }
+    .system-swatch b {
+      font-size: 0.68rem;
+      line-height: 1.25;
+    }
+    .system-swatch code {
+      margin-top: 3px;
+      font-size: 0.64rem;
+      color: currentColor;
+      opacity: 0.78;
+    }
+    .application-card {
+      overflow: hidden;
+      border: 1px solid rgba(74,51,44,0.12);
+      border-radius: 16px;
+      background: #F6EDE2;
+    }
+    .application-card img {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      object-fit: cover;
+      cursor: zoom-in;
+      background: #F6EDE2;
+    }
+    .application-caption {
+      padding: 14px 16px 16px;
+      color: #8A7B6A;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+    .usage-rules {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 34px;
+    }
+    .usage-rule {
+      border: 1px solid rgba(74,51,44,0.12);
+      border-radius: 14px;
+      background: #FFFCF8;
+      padding: 16px;
+      min-height: 160px;
+    }
+    .usage-rule h3 {
+      margin: 0 0 8px;
+      color: #4A332C;
+      font-size: 0.95rem;
+      letter-spacing: 0;
+    }
+    .usage-rule p {
+      margin: 0;
+      color: #8A7B6A;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+    .apple-system-guide {
+      margin: 0 0 36px;
+      border: 1px solid rgba(74,51,44,0.14);
+      border-radius: 20px;
+      background: #FFFCF8;
+      overflow: hidden;
+    }
+    .apple-guide-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
+      padding: 24px;
+      border-bottom: 1px solid rgba(74,51,44,0.1);
+      background: linear-gradient(180deg, #FFFCF8 0%, #F6EDE2 100%);
+    }
+    .apple-guide-head h2 {
+      margin: 0 0 10px;
+      color: #4A332C;
+      font-size: clamp(1.45rem, 3vw, 2.25rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .apple-guide-head p {
+      margin: 0;
+      max-width: 82ch;
+      color: #8A7B6A;
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+    .apple-source-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .apple-source-links a {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(74,51,44,0.16);
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: rgba(255,252,248,0.78);
+      color: #4A332C;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .apple-layer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding: 20px;
+    }
+    .apple-layer {
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr);
+      gap: 16px;
+      min-height: 176px;
+      border: 1px solid rgba(74,51,44,0.1);
+      border-radius: 16px;
+      background: #FFFCF8;
+      padding: 16px;
+    }
+    .layer-demo {
+      position: relative;
+      min-height: 144px;
+      border: 1px solid rgba(74,51,44,0.1);
+      border-radius: 14px;
+      background: var(--demo-bg, #FBF7F0);
+      overflow: hidden;
+    }
+    .layer-demo::before,
+    .layer-demo::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      background: var(--demo-accent, #A87545);
+      opacity: var(--demo-opacity, 1);
+    }
+    .layer-demo::before {
+      width: 54px;
+      height: 54px;
+      top: 18px;
+      left: 18px;
+    }
+    .layer-demo::after {
+      width: 74px;
+      height: 18px;
+      right: 16px;
+      bottom: 20px;
+    }
+    .layer-demo .demo-card {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 48px;
+      height: 44px;
+      border: 1px solid rgba(74,51,44,0.1);
+      border-radius: 12px;
+      background: var(--demo-card, #FFFCF8);
+    }
+    .layer-demo .demo-line {
+      position: absolute;
+      left: 32px;
+      right: 32px;
+      bottom: 64px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--demo-line, #E2D6C8);
+    }
+    .layer-copy h3 {
+      margin: 0 0 8px;
+      color: #4A332C;
+      font-size: 0.98rem;
+      letter-spacing: 0;
+    }
+    .layer-copy p {
+      margin: 0 0 10px;
+      color: #8A7B6A;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+    .layer-copy ul {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: #4A332C;
+      font-size: 0.76rem;
+      line-height: 1.42;
+    }
+    .layer-copy li {
+      padding-left: 12px;
+      position: relative;
+    }
+    .layer-copy li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #A87545;
+    }
+    .apple-token-map {
+      width: calc(100% - 40px);
+      margin: 0 20px 20px;
+      border-collapse: separate;
+      border-spacing: 0;
+      overflow: hidden;
+      border: 1px solid rgba(74,51,44,0.12);
+      border-radius: 16px;
+      background: #FFFCF8;
+    }
+    .apple-token-map th,
+    .apple-token-map td {
+      padding: 13px 14px;
+      border-bottom: 1px solid rgba(74,51,44,0.1);
+      text-align: left;
+      vertical-align: top;
+      color: #4A332C;
+      font-size: 0.8rem;
+      line-height: 1.45;
+    }
+    .apple-token-map th {
+      background: #F6EDE2;
+      color: #4A332C;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .apple-token-map tr:last-child td {
+      border-bottom: 0;
+    }
+    .apple-token-map code {
+      color: #4A332C;
+      font-size: 0.74rem;
+      font-weight: 800;
+    }
     .report-note,
     .ratio-note {
       border: 1px solid rgba(61,56,50,0.12);
@@ -543,9 +837,18 @@
     }
     @media (max-width: 820px) {
       .report-intro,
+      .latest-system,
+      .apple-guide-head,
+      .apple-layer-grid,
       .scheme-hero,
       .usage-grid {
         grid-template-columns: 1fr;
+      }
+      .apple-source-links {
+        justify-content: flex-start;
+      }
+      .usage-rules {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .scheme-hero img {
         min-height: 280px;
@@ -554,27 +857,291 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+    @media (max-width: 560px) {
+      .system-swatches,
+      .usage-rules {
+        grid-template-columns: 1fr;
+      }
+      .apple-layer {
+        grid-template-columns: 1fr;
+      }
+      .apple-token-map {
+        display: block;
+        overflow-x: auto;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <header>
       <h1>Pawbie Palette Exploration</h1>
-      <p class="subtitle">Palette report for the revised Pawbie shortlist. The goal is to separate brand expression from app usability: neutral UI foundation, controlled brand accents, richer color only in illustration and campaign layers.</p>
+      <p class="subtitle">Updated with the latest Pawbie Warm Matte System. The goal is to separate brand expression from app usability: neutral UI foundation, controlled brand accents, richer color only in character, illustration, packaging, and campaign layers.</p>
     </header>
+
+    <section class="latest-system" aria-label="Latest Pawbie branding color system">
+      <div class="latest-copy">
+        <span class="latest-kicker">Latest Branding Color System</span>
+        <h2>Pawbie Warm Matte System</h2>
+        <p>新的 app-facing 色彩基线从 07r 的 warm lifestyle 方向收束而来：界面先保证信息层级和平静可用性，再用小面积 tint、Pawbie 毛色、包装纸感和贴纸情绪建立品牌温度。</p>
+        <div class="system-swatches" aria-label="Core color tokens">
+          <span class="system-swatch" style="background:#FBF7F0"><b>Soft Cream</b><code>#FBF7F0</code></span>
+          <span class="system-swatch" style="background:#FFFCF8"><b>Shell White</b><code>#FFFCF8</code></span>
+          <span class="system-swatch" style="background:#F6EDE2"><b>Warm Milk</b><code>#F6EDE2</code></span>
+          <span class="system-swatch" style="background:#EEE3D6"><b>Pale Sand</b><code>#EEE3D6</code></span>
+          <span class="system-swatch" style="background:#E2D6C8"><b>Line Oat</b><code>#E2D6C8</code></span>
+          <span class="system-swatch dark" style="background:#4A332C"><b>Cocoa Text</b><code>#4A332C</code></span>
+          <span class="system-swatch dark" style="background:#A87545"><b>Primary Tint</b><code>#A87545</code></span>
+          <span class="system-swatch" style="background:#F1DEC9"><b>Soft Tint</b><code>#F1DEC9</code></span>
+          <span class="system-swatch" style="background:#FFC5E6"><b>Pawbie Pink</b><code>#FFC5E6</code></span>
+          <span class="system-swatch" style="background:#FCFCF7"><b>Pawbie Cream</b><code>#FCFCF7</code></span>
+          <span class="system-swatch" style="background:#D8E5F4"><b>Pawbie Blue</b><code>#D8E5F4</code></span>
+          <span class="system-swatch" style="background:#F2CF57"><b>Emotion Yellow</b><code>#F2CF57</code></span>
+        </div>
+      </div>
+      <article class="application-card image-card">
+        <img src="generated-moodboards/pawbie-warm-matte-application-moodboard-2026-06-23.svg" alt="Pawbie Warm Matte System applied to app, website, poster print, and packaging with official Pawbie assets">
+        <div class="application-caption">Moodboard 示意：同一套 Warm Matte token 分别落到 app、website、海报印刷、包装。此版本直接使用官方 Pawbie 2D/3D 素材，避免生图重新发明角色形象。</div>
+      </article>
+    </section>
+
+    <section class="usage-rules" aria-label="Pawbie color application rules">
+      <article class="usage-rule">
+        <h3>App</h3>
+        <p>以 `softCream`、`shellWhite`、`warmMilk` 做底；`tint.primary` 只用于 selected date、progress、小 CTA。底部 tab 用 matte pill，不做饱和彩色导航。</p>
+      </article>
+      <article class="usage-rule">
+        <h3>Website</h3>
+        <p>首屏和内容模块可借用 warm paper / package feeling，但 CTA 和结构仍用 cocoa text 与 kraft tint，避免变成纯包装页。</p>
+      </article>
+      <article class="usage-rule">
+        <h3>Poster / Print</h3>
+        <p>可放大 Pawbie 毛色、贴纸形状和低对比图案；标题和信息层级仍用 `#4A332C`，红色只保留风险或极小提示。</p>
+      </article>
+      <article class="usage-rule">
+        <h3>Packaging</h3>
+        <p>沿用 cream base、低对比生活方式纹样、浅蓝/粉色角色 cue 与 kraft strip。包装色是品牌延展，不替代 app token。</p>
+      </article>
+    </section>
+
+    <section class="apple-system-guide" aria-label="Apple-style app color system guidance for Pawbie">
+      <div class="apple-guide-head">
+        <div>
+          <span class="latest-kicker">Apple-style App Color System</span>
+          <h2>按 iOS 的颜色逻辑使用 Pawbie 品牌色</h2>
+          <p>Apple 的 app color system 不是把品牌色铺满界面，而是把颜色拆成 background、surface、tint、semantic state、content identity 和 accessibility 几层。Pawbie 应该学习这种分层：系统色负责可用性，品牌色负责识别和情绪，危险色只负责风险。</p>
+        </div>
+        <nav class="apple-source-links" aria-label="Apple HIG references">
+          <a href="https://developer.apple.com/design/human-interface-guidelines/color" target="_blank" rel="noreferrer">Apple HIG · Color</a>
+          <a href="https://developer.apple.com/design/human-interface-guidelines/dark-mode" target="_blank" rel="noreferrer">Dark Mode</a>
+          <a href="https://developer.apple.com/design/human-interface-guidelines/accessibility" target="_blank" rel="noreferrer">Accessibility</a>
+        </nav>
+      </div>
+
+      <div class="apple-layer-grid">
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#FBF7F0;--demo-card:#FFFCF8;--demo-accent:#F6EDE2;--demo-line:#E2D6C8;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>1. Background first</h3>
+            <p>先定义系统背景，而不是先选主色。iOS 界面通常让背景承担安静的空间秩序。</p>
+            <ul>
+              <li>全局底色用 `color.canvas.softCream`。</li>
+              <li>不要给 Home / Diary / Settings 各自发明不同大背景。</li>
+              <li>顶部和底部导航尽量透明或同底色，让内容呼吸。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#FBF7F0;--demo-card:#FFFCF8;--demo-accent:#EEE3D6;--demo-line:#E2D6C8;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>2. Surface creates hierarchy</h3>
+            <p>像 iOS 的 grouped table 和 sheet 一样，用 surface 层级表达结构，少用重阴影和大色块。</p>
+            <ul>
+              <li>`shellWhite` 用于 sheet、dialog、settings row。</li>
+              <li>`warmMilk` 用于 Home hero、empty state、onboarding illustration area。</li>
+              <li>`paleSand` 用于 selected pill、control base、低强调模块。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#FFFCF8;--demo-card:#F6EDE2;--demo-accent:#A87545;--demo-line:#4A332C;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>3. Tint is interaction, not decoration</h3>
+            <p>iOS 的 tint color 通常告诉用户“这里可以操作 / 这里被选中”。Pawbie 的 tint 要小、准、可预测。</p>
+            <ul>
+              <li>`tint.primary` 只用于 selected date、progress、active dot、小 CTA。</li>
+              <li>按钮不需要全部 kraft；强操作可用 `#4A332C` 深色按钮。</li>
+              <li>不要把 `tint.primary` 用作整页 header、tab bar 或大背景。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#FFFCF8;--demo-card:#FBE4DC;--demo-accent:#D94A35;--demo-line:#D94A35;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>4. Semantic colors stay semantic</h3>
+            <p>系统状态色不能被品牌情绪污染。危险色一旦变成装饰，用户就会失去对风险的敏感度。</p>
+            <ul>
+              <li>`danger.signal` 只用于 remove、error、failed update、irreversible action。</li>
+              <li>普通提醒、轻微 warning 可先用 copy、icon、位置和 `tint.soft`。</li>
+              <li>删除确认可用 `danger.softBg`，但不要整屏红。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#F6EDE2;--demo-card:#FFFCF8;--demo-accent:#D8E5F4;--demo-line:#FFC5E6;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>5. Brand color lives in content</h3>
+            <p>Apple app 里品牌识别往往在内容、插画、icon、状态表达中出现，而不是把 navigation chrome 染满。</p>
+            <ul>
+              <li>Pink / Cream / Blue 是 Pawbie 身份色，不是 app selected color。</li>
+              <li>毛色用于 Pawbie 本体、头像、设备卡、贴纸、mood 插画。</li>
+              <li>三只同时出现时固定 Pink / Cream / Blue，避免系统感漂移。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#1F1916;--demo-card:#2A211D;--demo-accent:#D1A06F;--demo-line:#C8B8A8;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>6. Dark mode is a separate palette</h3>
+            <p>不要把浅色模式自动反相。Pawbie 的暗色模式应该像温暖夜间房间，而不是纯黑科技界面。</p>
+            <ul>
+              <li>Dark canvas 用 `#1F1916`，surface 用 `#2A211D` / `#3A2D27`。</li>
+              <li>Dark tint 用更亮的 `#D1A06F` 保持可见。</li>
+              <li>Diary 阅读优先，mood 色只做小面积辅助。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#FBF7F0;--demo-card:#F1DEC9;--demo-accent:#4A332C;--demo-line:#8A7B6A;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>7. Accessibility decides final usage</h3>
+            <p>颜色漂亮不等于能上线。对比度、动态文字、色盲可辨识和 Reduce Transparency 都会影响最终选择。</p>
+            <ul>
+              <li>正文和小字最低按 4.5:1 检查。</li>
+              <li>selected state 必须同时有 pill、dot、字重或 icon 状态。</li>
+              <li>低对比品牌色只能做背景 tint 或插画，不承载关键文本。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="apple-layer">
+          <div class="layer-demo" style="--demo-bg:#F6EDE2;--demo-card:#FFFCF8;--demo-accent:#F2CF57;--demo-line:#A87545;--demo-opacity:1;">
+            <span class="demo-card"></span>
+            <span class="demo-line"></span>
+          </div>
+          <div class="layer-copy">
+            <h3>8. Materials stay matte</h3>
+            <p>即使参考 iOS，也不需要追 Liquid Glass 或强透明材质。Pawbie 的品牌触感来自纸面、毛绒和柔软包装。</p>
+            <ul>
+              <li>优先 1px warm border、浅 surface 差异和哑光 fill。</li>
+              <li>透明 blur 只用于必要 overlay，不作为品牌主视觉。</li>
+              <li>yellow 只做快乐点缀，不做系统主按钮。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <table class="apple-token-map" aria-label="Apple-style color role mapping for Pawbie tokens">
+        <thead>
+          <tr>
+            <th>Apple-style role</th>
+            <th>Pawbie token</th>
+            <th>Where to use</th>
+            <th>Do not use for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>System background</td>
+            <td><code>softCream</code> / <code>#FBF7F0</code></td>
+            <td>App 全局背景、tab 背后、Diary 主画布</td>
+            <td>卡片内部强强调、按钮填充</td>
+          </tr>
+          <tr>
+            <td>Primary grouped surface</td>
+            <td><code>shellWhite</code> / <code>#FFFCF8</code></td>
+            <td>Settings rows、sheet、popover、dialog、menu</td>
+            <td>无边界地铺满整页，导致层级消失</td>
+          </tr>
+          <tr>
+            <td>Secondary emotional surface</td>
+            <td><code>warmMilk</code> / <code>#F6EDE2</code></td>
+            <td>Home hero、empty state、onboarding、widget 背景</td>
+            <td>密集文本区域和长列表底色</td>
+          </tr>
+          <tr>
+            <td>Control base / selected background</td>
+            <td><code>paleSand</code> / <code>tint.soft</code></td>
+            <td>Segmented control、selected tab pill、chip、pressed state</td>
+            <td>表达危险、错误或不可逆状态</td>
+          </tr>
+          <tr>
+            <td>App tint</td>
+            <td><code>tint.primary</code> / <code>#A87545</code></td>
+            <td>active value、progress、selected date、小面积 CTA</td>
+            <td>大面积 nav bar、整页背景、所有 icon 默认色</td>
+          </tr>
+          <tr>
+            <td>Label colors</td>
+            <td><code>text.primary</code> / <code>text.secondary</code></td>
+            <td>标题、正文、metadata、inactive icon、chevron</td>
+            <td>使用纯黑或低对比毛色承载正文</td>
+          </tr>
+          <tr>
+            <td>Semantic destructive</td>
+            <td><code>danger.signal</code> / <code>#D94A35</code></td>
+            <td>Remove Pawbie、error title/icon、失败更新、确认删除</td>
+            <td>普通提示、品牌装饰、营销强调</td>
+          </tr>
+          <tr>
+            <td>Brand identity</td>
+            <td><code>pawbie.pink</code> / <code>cream</code> / <code>blue</code></td>
+            <td>Pawbie 本体、头像、设备卡、mood sticker、包装视觉</td>
+            <td>系统 tint、tab selected、长文本、危险状态</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
     <section class="report-intro" aria-label="Palette report summary">
       <article class="report-note">
-        <h2>Report Result</h2>
-        <p>07r Maillard Reduced Red is the current working baseline. The other revised routes remain comparison references. App screens use readable cream/oat surfaces and graphite structure; Kraft/Cocoa carry warmth; red stays a small semantic signal.</p>
+        <h2>Updated Result</h2>
+        <p>Pawbie Warm Matte System is now the latest baseline. 07r Maillard Reduced Red remains the historical route that led here, but app screens now use the refined token set above: softer foundation, warmer primary text, smaller interaction tint, and clearer danger red.</p>
       </article>
       <article class="ratio-note">
         <h2>App Color Rule</h2>
-        <p>Use about 70% warm neutral UI base, 20% graphite/clay structure, 5% Pawbie identity signal, and 5% campaign or character accents. Brand colors should support recognition without becoming the whole interface.</p>
+        <p>Use about 70% warm neutral UI base, 20% text/structure/small tint, 5–15% Pawbie identity colors, and only tiny semantic signals. Brand colors should support recognition without becoming the whole interface.</p>
       </article>
       <article class="report-note">
         <h2>Key Color Hypothesis</h2>
-        <p>The app key color should not default to Fur Blue. Pawbie has pink, cream, and blue product variants, so the system key should sit outside the fur trio: Graphite for actions, Clay/Kraft for warmth, and Eye Teal only as a life/intelligence signal.</p>
+        <p>The app key color should not default to any fur color. Pawbie has pink, cream, and blue product variants, so interaction color sits outside the fur trio: `#A87545` for small active states and `#4A332C` for readable structure.</p>
       </article>
     </section>
 
